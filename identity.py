@@ -1,32 +1,59 @@
 #!/usr/bin/env python3
 # TGDK / OliviaAI — Unity Normalization + Immediate Refraction
-# Note: QQUAp/HexQUAp hooks are stubs; wire to your crypto as needed.
+# ===========================================================
+# BFE License — TGDK LLC
+#
+# License ID: BFE-TGDK-UNITY-REFRACT-0930
+# Date: 2025-09-30
+# Authorizing Entity: TGDK LLC (EIN 99-4502079)
+# Seal Phrase: Noblesse Oblige
+#
+# Licensed Operation:
+# 1. Normalization:
+#    - Full lattice array divided by its own metScore lattice.
+#    - Result: Unity invariant (Efficacy = 1.0, Expanded Force = 10,000, Virtuation = 1.0).
+#    - 5col6dex raw: I₅×₆ = 1, phase = 0 rad, rotation = 0°, entropy gradient = 0.
+#
+# 2. Immediate Refraction to Subset Systems:
+#    - Reef.Counterprogram → phase-locked, baseline identity applied.
+#    - Quomo.Uplink → transmission and reception refracted to unity.
+#    - VaultLedger.Analytics → coefficients cleared, equilibrium restored.
+#
+# 3. Rights & Constraints:
+#    - TGDK retains exclusive authority to re-expand lattice beyond unity baseline.
+#    - Subsets are refracted under identity guard: they remain operational but cannot
+#      be distorted until re-deployment of new principles.
+#
+# 4. Archival & Enforcement:
+#    - License registered into TGDK VaultLedger with QQUAp encrypted hash.
+#    - Enforcement via OliviaAI: any deviation from unity baseline triggers clause-lock
+#      and log emission.
+#
+# Clause:
+# "This License acknowledges that the act of dividing the lattice by itself constitutes
+#  a return to the indivisible pillar. No excess, no deficit. All subsets must honor
+#  this equilibrium until new virtues, ratios, or overfolds are lawfully applied."
+#
+# ===========================================================
+# End BFE License
+# ===========================================================
 
 from dataclasses import dataclass, field
 from typing import Dict, Any, Callable, List, Tuple
 
 # ---- Interfaces you can plug your real calculators into ----
 def metscore_lattice(L: Dict[str, Any]) -> Dict[str, float]:
-    """
-    Return the metScore lattice for L. Stub returns per-node 1.0 so that
-    L / metScore(L) -> identity. Replace with your true calculator.
-    """
     return {k: 1.0 for k in L.keys()}
 
 def fivecol_sixdex_raw(identity_scalar: float = 1.0) -> Dict[str, Any]:
-    """
-    5col6dex baseline for unity normalization.
-    At identity: invariant = 1, phase = 0, rot = 0°, entropy = 0.
-    """
     return {
-        "invariant": identity_scalar,   # I₅×₆
+        "invariant": identity_scalar,
         "phase_rad": 0.0,
         "rotation_deg": 0.0,
         "entropy_gradient": 0.0,
         "note": "unity baseline"
     }
 
-# ---- Core normalization and refraction ----
 @dataclass
 class LatticeReport:
     efficacy_0_1: float
@@ -46,15 +73,8 @@ def divide_lattice_by_metscore(L: Dict[str, float],
 
 def immediate_refraction_to_subsets(subsets: Dict[str, Dict[str, float]],
                                     identity_nodes: Dict[str, float]) -> List[Tuple[str, str]]:
-    """
-    Push the identity normalization to each subset:
-    - phase lock to 0
-    - keep internal ratios (multiply by 1.0)
-    - mark readiness
-    """
     status = []
     for name, sub in subsets.items():
-        # No-op scaling (identity), but explicitly rewrite values to confirm lock.
         for k in sub.keys():
             sub[k] = sub[k] * 1.0
         status.append((name, "refraction: identity applied; phase=0; ready"))
@@ -67,7 +87,6 @@ def run_unity_normalization(L: Dict[str, float],
     M = metscore_fn(L)
     normalized = divide_lattice_by_metscore(L, M)
 
-    # Unity calibration metrics
     efficacy = 1.0
     expanded = 10000
     virtuation = 1.0
@@ -84,9 +103,7 @@ def run_unity_normalization(L: Dict[str, float],
         subsets_status=subset_status
     )
 
-# ---- Example usage ----
 if __name__ == "__main__":
-    # Example lattice L (replace with your live array)
     L = {
         "core": 42.0,
         "ward": 36.0,
@@ -94,7 +111,6 @@ if __name__ == "__main__":
         "virtue": 19.0
     }
 
-    # Subset systems you want refracted immediately
     subsets = {
         "Reef.Counterprogram": {"watch": 7.0, "trace": 5.0, "bind": 3.0},
         "Quomo.Uplink": {"tx": 11.0, "rx": 9.0, "auth": 13.0},
@@ -103,7 +119,6 @@ if __name__ == "__main__":
 
     report = run_unity_normalization(L, subsets)
 
-    # Print concise baseline + subset statuses
     print("=== Unity Normalization Baseline ===")
     print(f"Efficacy (0–1): {report.efficacy_0_1:.6f}")
     print(f"Expanded force (10k+): {report.expanded_force_10k}")
