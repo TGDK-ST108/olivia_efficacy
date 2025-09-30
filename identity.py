@@ -35,13 +35,14 @@
 #  this equilibrium until new virtues, ratios, or overfolds are lawfully applied."
 #
 # ===========================================================
+# QQUAp Hash: QQUAp::UNITY-REFRACT-0930::6f8a2c97c3d1e5b947e1a6dfb2ac9f3b
+# ===========================================================
 # End BFE License
 # ===========================================================
 
 from dataclasses import dataclass, field
 from typing import Dict, Any, Callable, List, Tuple
 
-# ---- Interfaces you can plug your real calculators into ----
 def metscore_lattice(L: Dict[str, Any]) -> Dict[str, float]:
     return {k: 1.0 for k in L.keys()}
 
@@ -65,11 +66,7 @@ class LatticeReport:
 
 def divide_lattice_by_metscore(L: Dict[str, float],
                                M: Dict[str, float]) -> Dict[str, float]:
-    Z = {}
-    for k, v in L.items():
-        m = M.get(k, 1.0)
-        Z[k] = v / m if m != 0 else 0.0
-    return Z
+    return {k: (v / M.get(k, 1.0)) if M.get(k, 1.0) != 0 else 0.0 for k, v in L.items()}
 
 def immediate_refraction_to_subsets(subsets: Dict[str, Dict[str, float]],
                                     identity_nodes: Dict[str, float]) -> List[Tuple[str, str]]:
@@ -104,13 +101,7 @@ def run_unity_normalization(L: Dict[str, float],
     )
 
 if __name__ == "__main__":
-    L = {
-        "core": 42.0,
-        "ward": 36.0,
-        "pro_rata": 28.0,
-        "virtue": 19.0
-    }
-
+    L = {"core": 42.0, "ward": 36.0, "pro_rata": 28.0, "virtue": 19.0}
     subsets = {
         "Reef.Counterprogram": {"watch": 7.0, "trace": 5.0, "bind": 3.0},
         "Quomo.Uplink": {"tx": 11.0, "rx": 9.0, "auth": 13.0},
