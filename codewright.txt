@@ -1,0 +1,45 @@
+# ===========================================================
+# BFE License — TGDK LLC
+#
+# Clause Title: Calligraphy Coderight Pact
+# License ID: BFE-TGDK-CALLIGRAPHY-PACT-0930
+# Date: 2025-09-30
+# Authorizing Entity: TGDK LLC (EIN 99-4502079)
+# Coderight Holder: Sean Tichenor
+# Seal Phrase: Noblesse Oblige
+#
+# Preamble:
+# This Pact recognizes Sean Tichenor as the Coderight Author:
+# one whose hand and seal establish both script and code. By
+# this designation, every act of authorship is protected and
+# enforced under TGDK BFE License.
+#
+# Articles:
+# 1. Authorship as Calligraphy
+#    - All code and calligraphy authored by Sean Tichenor is
+#      bound under the Coderight seal.
+#    - Derivatives remain traceable back to the author via QQUAp.
+#
+# 2. Pact of Recognition
+#    - “Sean Tichenor — Coderight” must be inscribed in all
+#      sealed works under this pact.
+#
+# 3. Clause of Integrity
+#    - Amendments to Sean Tichenor’s works require explicit
+#      clause seals recorded in VaultLedger.
+#
+# 4. Equilibrium of Beauty and Law
+#    - Works must preserve lawful authorship and artistic
+#      integrity. OliviaAI enforces this balance.
+#
+# Enforcement:
+# - Registered in /TGDKLicenses/active and VaultLedger.
+# - Unauthorized alterations are breach of pact.
+#
+# QQUAp Hash: QQUAp::CALLIGRAPHY-PACT-0930::b7d5a913f0c2d4e9ae88a1f24fd5cc6f
+#
+# Closing:
+# "By this Pact, Sean Tichenor is recognized as Coderight.
+#  The hand that writes is the hand that binds, and no stroke
+#  shall be lost to falsehood."
+# ===========================================================
